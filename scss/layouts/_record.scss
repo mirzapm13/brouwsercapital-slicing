@@ -1,0 +1,46 @@
+@use '../abstracts/variables' as v;
+
+.record {
+    width: 100%;
+    background-color: v.$background-secondary;
+}
+
+.recordContainer {
+    width: 100%;
+    max-width: 1110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 112px;
+    padding-bottom: 112px;
+
+    h2 {
+        color: v.$font-secondary;
+        margin-bottom: 64px;
+    }
+
+    &__detail {
+        display: flex;
+        gap: 50px;
+        .count {
+            color: v.$font-record;
+            font-size: 56px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            span {
+                font-size: 28px;
+            }
+        }
+
+        .subtext {
+            text-align: center;
+        }
+    }
+
+    
+
+}

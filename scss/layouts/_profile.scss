@@ -1,0 +1,51 @@
+@use '../abstracts/variables' as v;
+
+.profile {
+    width: 100%;
+}
+
+.profileContainer {
+    margin: 112px auto 144px auto;
+    max-width: 1110px;
+    display: flex;
+    gap: 128px;
+    
+    &__image {
+        position: relative;
+        &::before {
+            height: 100%;
+            width: 100%;
+            display: inline-block;
+            position: absolute;
+            content: "";
+            left: 32px;
+            top: 32px;
+            background-color: #9e8253; //#check
+            opacity: 0.5;
+            z-index: -1;
+        }
+
+        img {
+            width: 443px;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        justify-content: center;
+
+        h2{
+            color: v.$font-secondary;
+        }
+
+        p{
+            color: v.$font-tertiary;
+        }
+
+        hr {
+            color: v.$font-tertiary;
+        }
+    }
+}

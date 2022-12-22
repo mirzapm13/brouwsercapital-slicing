@@ -1,0 +1,32 @@
+@use '../abstracts/mixins' as m;
+@use '../abstracts/variables' as v;
+@use '../base/_base' as b;
+
+nav{
+    width: 100%;
+    position: absolute;
+}
+
+.navbar{
+    width: 1110px;
+    @include m.push--auto;
+
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    &__item {
+        display: flex;
+        gap: 32px;
+
+        a {
+            color: v.$font-primary;
+            font-family: v.$font-family-1;
+            font-size: 20px;
+        }
+    }
+
+
+}    
