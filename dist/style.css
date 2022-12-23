@@ -57,6 +57,7 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+  line-height: 1.5;
 }
 
 /*
@@ -66,6 +67,10 @@ a,
 a:visited,
 a:active {
   text-decoration: none;
+}
+
+p {
+  margin: 0;
 }
 
 * {
@@ -95,7 +100,6 @@ nav {
 }
 
 .navbar {
-  width: 1110px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 32px;
@@ -123,12 +127,9 @@ header {
 }
 
 .headerContainer {
-  width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 10px;
   color: #fafafa;
   background-color: rgba(0, 0, 0, 0.5);
@@ -143,27 +144,34 @@ header {
 
 .profileContainer {
   margin: 112px auto 144px auto;
-  max-width: 1110px;
   display: flex;
   gap: 128px;
 }
-.profileContainer__image {
+.profileContainer__image-bg {
   position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
-.profileContainer__image::before {
-  height: 100%;
-  width: 100%;
+.profileContainer__image-bg::before {
   display: inline-block;
   position: absolute;
   content: "";
-  left: 32px;
+  left: -32px;
   top: 32px;
+  right: 32px;
+  bottom: -32px;
   background-color: #9e8253;
   opacity: 0.5;
   z-index: -1;
 }
-.profileContainer__image img {
+.profileContainer__image-bg img {
   width: 443px;
+}
+@media (max-width: 1200px) {
+  .profileContainer__image-bg img {
+    width: 300px;
+  }
 }
 .profileContainer__text {
   display: flex;
@@ -184,21 +192,13 @@ header {
 .record {
   width: 100%;
   background-color: #eeeeee;
-}
-
-.recordContainer {
-  width: 100%;
-  max-width: 1110px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
   padding-top: 112px;
   padding-bottom: 112px;
 }
+
 .recordContainer h2 {
   color: #303030;
+  text-align: center;
   margin-bottom: 64px;
 }
 .recordContainer__detail {
@@ -217,4 +217,146 @@ header {
 }
 .recordContainer__detail .subtext {
   text-align: center;
+}
+
+.principle {
+  width: 100%;
+  background-color: #e0e0e0;
+}
+
+.principleContainer {
+  padding-top: 112px;
+  padding-bottom: 112px;
+}
+.principleContainer div {
+  margin-bottom: 50px;
+}
+.principleContainer .title {
+  text-align: center;
+}
+.principleContainer .item h2 {
+  z-index: 1;
+}
+.principleContainer .item h2 span {
+  color: white;
+  position: relative;
+}
+.principleContainer .item h2 span::before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-color: #9e8253;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translateX(-25%);
+}
+.principleContainer p {
+  font-family: Lora, sans-serif;
+}
+.principleContainer hr {
+  color: #9e8253;
+}
+
+.contact {
+  width: 100%;
+}
+
+.contactContainer {
+  margin: 112px auto 144px auto;
+  gap: 128px;
+}
+.contactContainer__image {
+  margin-bottom: 150px;
+}
+.contactContainer__image-bg {
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.contactContainer__image-bg::before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  left: 32px;
+  top: 32px;
+  right: -32px;
+  bottom: -32px;
+  background-color: #9e8253;
+  opacity: 0.5;
+  z-index: -1;
+}
+.contactContainer__image-bg img {
+  width: 443px;
+}
+@media (max-width: 1200px) {
+  .contactContainer__image-bg img {
+    width: 300px;
+  }
+}
+.contactContainer__text {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+}
+.contactContainer__text h2 {
+  color: #303030;
+}
+.contactContainer__text p {
+  color: #575757;
+}
+.contactContainer__text hr {
+  color: #575757;
+}
+@media (max-width: 992px) {
+  .contactContainer__image {
+    order: -1;
+    margin-bottom: 92px;
+  }
+  .contactContainer__text {
+    margin-bottom: 100px;
+  }
+}
+
+footer {
+  width: 100%;
+  background: #eeeeee;
+}
+
+.footer-bottom {
+  background-color: #0d1931;
+}
+.footer-bottom p {
+  color: #9e8253;
+}
+
+.footer-upper {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.footer-upper input {
+  background-color: transparent;
+  border: 1px solid black;
+}
+.footer-upper p {
+  font-size: 16px;
+  color: #575757;
+  line-height: 48px;
+}
+.footer-upper p.section {
+  font-size: 18px;
+  color: #303030;
+  line-height: 40px;
+  margin-top: 20px;
+}
+@media (max-width: 780px) {
+  .footer-upper {
+    padding-top: 0;
+  }
+  .footer-upper p {
+    line-height: unset;
+  }
 }/*# sourceMappingURL=style.css.map */

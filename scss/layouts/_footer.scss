@@ -1,0 +1,44 @@
+@use '../abstracts/variables' as v;
+
+footer {
+    width: 100%;
+    background: v.$background-secondary;
+}
+
+.footer-bottom {
+    background-color: #0d1931; //#check
+    p {
+        color: #9e8253; //#check
+    }
+}
+
+.footer-upper {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    input {
+        background-color: transparent;
+        border: 1px solid black;
+    }
+
+    p {
+        font-size: 16px;
+        color: v.$font-tertiary;
+        line-height: 48px;
+    }
+
+    p.section {
+        font-size: 18px;
+        color: v.$font-secondary;
+        line-height: 40px;
+        margin-top: 20px;
+    }
+
+    @media (max-width: 780px) {
+        padding-top: 0;
+    
+        p {
+            line-height: unset;
+        }
+    }
+}

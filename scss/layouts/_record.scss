@@ -3,21 +3,15 @@
 .record {
     width: 100%;
     background-color: v.$background-secondary;
+    padding-top: 112px;
+    padding-bottom: 112px;
 }
 
 .recordContainer {
-    width: 100%;
-    max-width: 1110px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    padding-top: 112px;
-    padding-bottom: 112px;
 
     h2 {
         color: v.$font-secondary;
+        text-align: center;
         margin-bottom: 64px;
     }
 
